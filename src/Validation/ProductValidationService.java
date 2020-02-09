@@ -20,7 +20,6 @@ public class ProductValidationService {
         validationRules.forEach(s -> s.validate(productVariables));
     }
 
-
     public void validatePercent(ProductVariables productVariables) {
         validationPercentRules.forEach(s -> s.validatePercent(productVariables));
     }

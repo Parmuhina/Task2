@@ -3,7 +3,6 @@ package Validation;
 import Domain.ProductVariables;
 import Product.ProductRepository;
 
-
 public class Service {
 
     private ProductRepository repository = new ProductRepository();
