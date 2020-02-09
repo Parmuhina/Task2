@@ -1,6 +1,6 @@
 package Product;
-import Domain.ProductVariables;
 
+import Domain.ProductVariables;
 import java.util.HashMap;
 import java.util.Map;
 
