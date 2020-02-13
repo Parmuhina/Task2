@@ -1,8 +1,8 @@
 package Console;
 
 import Domain.ProductVariables;
-import Validation.ProductValidationService;
 import Validation.Service;
+
 import java.math.BigDecimal;
 import java.util.Scanner;
 
@@ -70,7 +70,7 @@ public class ConsoleUI {
 
         BigDecimal bigDecimalNull = new BigDecimal("0");
         while (product.getPrice().compareTo(bigDecimalNull) <= 0) {
-
+            System.out.println("Price need to be more than 0.");
             if (product.getPrice().compareTo(bigDecimalNull) <= 0) {
                 price = new BigDecimal(scanner.nextLine());
                 product.setPrice(price);
@@ -100,13 +100,15 @@ public class ConsoleUI {
         BigDecimal bigDecimalThousand = new BigDecimal("100");
         while (product.getPercent().compareTo(bigDecimalNull) < 0 |
                 product.getPercent().compareTo(bigDecimalThousand) > 0) {
-
+            System.out.println("Percents need to be more than 0 and less than 100 percents.");
             if (product.getPercent().compareTo(bigDecimalNull) < 0 |
                     product.getPercent().compareTo(bigDecimalThousand) > 0) {
                 percent = new BigDecimal(scanner.nextLine());
                 product.setPercent(percent);
             }
         }
+
+
 
         Long id = productService.createProduct(product);
         System.out.println("Result: " + id);
