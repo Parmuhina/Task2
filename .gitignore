@@ -27,3 +27,11 @@ nbdist/
 .nb-gradle/
 
 .DS_Store
+
+git rm -r -f --cached 
+
+git add
+
+git commit -m "Remove files"
+
+git push -u
