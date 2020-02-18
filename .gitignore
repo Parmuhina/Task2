@@ -28,10 +28,14 @@ nbdist/
 
 .DS_Store
 
-git rm -r -f --cached 
+git rm -r -f --cached
 
 git add
 
 git commit -m "Remove files"
 
 git push -u
+
+git rm -r .idea -f
+git commit -m ".idea is deleted"
+git push
