@@ -38,4 +38,6 @@ git push -u
 
 git rm -r .idea -f
 git commit -m ".idea is deleted"
+
+git rm -r .idea
 git push
