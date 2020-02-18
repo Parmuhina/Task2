@@ -12,6 +12,7 @@ public class Service {
         validationService.validate(productVariables);
         validationService.validatePrice(productVariables);
         validationService.validatePercent(productVariables);
+        validationService.validateUniqueName(productVariables);
         ProductVariables createdProduct= repository.insert(productVariables);
 
         return createdProduct.getId();
