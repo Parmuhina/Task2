@@ -2,9 +2,15 @@
 
 package Console;
 
+import Domain.ProductVariables;
+import Validation.Service;
 
+import java.math.BigDecimal;
+import java.util.Scanner;
+
+git rm-r--cached.idea
 //git rm --cached .idea
-        //git commit -m "remove .idea"
+ git commit -m "remove .idea"
 /*удалить .gitignore
     добавить .gitignore
 
@@ -12,12 +18,6 @@ package Console;
     git commit -m 'Удалила папку .idea из репозитория'
     git push*/
 
-import Domain.ProductVariables;
-import Validation.Service;
-
-import java.math.BigDecimal;
-import java.util.Scanner;
-git rm-r--cached.idea
 //echo'.idea'>>.gitignore
 
 
