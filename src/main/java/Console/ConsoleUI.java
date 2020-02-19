@@ -1,5 +1,4 @@
 
-
 package Console;
 
 import Domain.ProductVariables;
@@ -7,19 +6,6 @@ import Validation.Service;
 
 import java.math.BigDecimal;
 import java.util.Scanner;
-
-git rm-r--cached.idea
-//git rm --cached .idea
- git commit -m "remove .idea"
-/*удалить .gitignore
-    добавить .gitignore
-
-    git add .gitignore
-    git commit -m 'Удалила папку .idea из репозитория'
-    git push*/
-
-//echo'.idea'>>.gitignore
-
 
 public class ConsoleUI {
     private Service productService = new Service();
