@@ -1,15 +1,32 @@
+
+
 package Console;
+
+
+//git rm --cached .idea
+        //git commit -m "remove .idea"
+/*удалить .gitignore
+    добавить .gitignore
+
+    git add .gitignore
+    git commit -m 'Удалила папку .idea из репозитория'
+    git push*/
 
 import Domain.ProductVariables;
 import Validation.Service;
 
 import java.math.BigDecimal;
 import java.util.Scanner;
+git rm-r--cached.idea
+//echo'.idea'>>.gitignore
+
 
 public class ConsoleUI {
     private Service productService = new Service();
 
+
     public void execute() {
+
         while (true) {
             Scanner scanner = new Scanner(System.in);
             try {
@@ -49,8 +66,6 @@ public class ConsoleUI {
         System.out.println("Enter product name: ");
         String name = scanner.nextLine();
         product.setName(name);
-
-
 
 
         while ((product.getName().length() < 3) | (product.getName().length() > 32)) {
@@ -109,7 +124,6 @@ public class ConsoleUI {
         }
 
 
-
         Long id = productService.createProduct(product);
         System.out.println("Result: " + id);
         System.out.println("Chose your next step.");
@@ -160,4 +174,6 @@ public class ConsoleUI {
         product.setCategory(null);
         product.setId(null);
     }
+
+
 }
