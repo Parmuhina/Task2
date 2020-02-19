@@ -7,12 +7,14 @@ import Validation.Service;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
+
 /*touch .gitignore
         echo ".idea" > .gitignore
         git rm -r -f --cached .
         git add .
         git commit -m "Remove files"
         git push -u origin master*/
+
 
 public class ConsoleUI {
     private Service productService = new Service();
