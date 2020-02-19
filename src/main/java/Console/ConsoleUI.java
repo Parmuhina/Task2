@@ -43,6 +43,7 @@ public class ConsoleUI {
                 System.out.println("Incorrect choice. Please insert number more than 0 and less than 6.");
             }
         }
+
     }
 
     private void createProduct() {
