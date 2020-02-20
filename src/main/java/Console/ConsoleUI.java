@@ -7,7 +7,6 @@ import Validation.Service;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
-
 /*touch .gitignore
         echo ".idea" > .gitignore
         git rm -r -f --cached .
