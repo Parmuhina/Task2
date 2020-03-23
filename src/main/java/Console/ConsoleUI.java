@@ -1,15 +1,26 @@
+
 package Console;
 
 import Domain.ProductVariables;
-import Validation.ProductValidationService;
 import Validation.Service;
+
 import java.math.BigDecimal;
 import java.util.Scanner;
+
+/*touch .gitignore
+        echo ".idea" > .gitignore
+        git rm -r -f --cached .
+        git add .
+        git commit -m "Remove files"
+        git push -u origin master*/
+
 
 public class ConsoleUI {
     private Service productService = new Service();
 
+
     public void execute() {
+
         while (true) {
             Scanner scanner = new Scanner(System.in);
             try {
@@ -40,6 +51,7 @@ public class ConsoleUI {
                 System.out.println("Incorrect choice. Please insert number more than 0 and less than 6.");
             }
         }
+
     }
 
     private void createProduct() {
@@ -49,8 +61,6 @@ public class ConsoleUI {
         System.out.println("Enter product name: ");
         String name = scanner.nextLine();
         product.setName(name);
-
-
 
 
         while ((product.getName().length() < 3) | (product.getName().length() > 32)) {
@@ -70,7 +80,7 @@ public class ConsoleUI {
 
         BigDecimal bigDecimalNull = new BigDecimal("0");
         while (product.getPrice().compareTo(bigDecimalNull) <= 0) {
-
+            System.out.println("Price need to be more than 0.");
             if (product.getPrice().compareTo(bigDecimalNull) <= 0) {
                 price = new BigDecimal(scanner.nextLine());
                 product.setPrice(price);
@@ -100,13 +110,14 @@ public class ConsoleUI {
         BigDecimal bigDecimalThousand = new BigDecimal("100");
         while (product.getPercent().compareTo(bigDecimalNull) < 0 |
                 product.getPercent().compareTo(bigDecimalThousand) > 0) {
-
+            System.out.println("Percents need to be more than 0 and less than 100 percents.");
             if (product.getPercent().compareTo(bigDecimalNull) < 0 |
                     product.getPercent().compareTo(bigDecimalThousand) > 0) {
                 percent = new BigDecimal(scanner.nextLine());
                 product.setPercent(percent);
             }
         }
+
 
         Long id = productService.createProduct(product);
         System.out.println("Result: " + id);
@@ -158,4 +169,6 @@ public class ConsoleUI {
         product.setCategory(null);
         product.setId(null);
     }
+
+
 }

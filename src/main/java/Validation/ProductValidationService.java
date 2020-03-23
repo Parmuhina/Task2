@@ -4,6 +4,7 @@ import Domain.ProductVariables;
 import java.util.HashSet;
 import java.util.Set;
 
+
 public class ProductValidationService {
 
     private Set<ProductValidationRule> validationRules = new HashSet<>();
@@ -19,7 +20,6 @@ public class ProductValidationService {
     public void validate(ProductVariables productVariables) {
         validationRules.forEach(s -> s.validate(productVariables));
     }
-
 
     public void validatePercent(ProductVariables productVariables) {
         validationPercentRules.forEach(s -> s.validatePercent(productVariables));
