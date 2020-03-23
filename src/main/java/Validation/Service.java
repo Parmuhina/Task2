@@ -3,7 +3,6 @@ package Validation;
 import Domain.ProductVariables;
 import Product.ProductRepository;
 
-
 public class Service {
 
     private ProductRepository repository = new ProductRepository();
@@ -13,6 +12,7 @@ public class Service {
         validationService.validate(productVariables);
         validationService.validatePrice(productVariables);
         validationService.validatePercent(productVariables);
+        validationService.validateUniqueName(productVariables);
         ProductVariables createdProduct= repository.insert(productVariables);
 
         return createdProduct.getId();

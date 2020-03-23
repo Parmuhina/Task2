@@ -14,6 +14,11 @@ public class ProductRepository {
         return productVariables;
     }
 
+    public boolean existsByName(String name) {
+        return tasks.values().stream()
+                .anyMatch(tasks -> tasks.getName().equalsIgnoreCase(name));
+    }
+
     public ProductVariables findProductById(Long id) {
         return tasks.get(id);
     }
