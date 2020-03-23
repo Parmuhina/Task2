@@ -66,8 +66,8 @@ public class ProductVariables {
         ProductVariables product = (ProductVariables) o;
         return Objects.equals(id, product.id) &&
                 Objects.equals(name, product.name) &&
-                Objects.equals(price, product.price) &&
-                Objects.equals(percent, product.percent);
+                Objects.equals(price, product.price); //&&
+               // Objects.equals(percent, product.percent);
 
     }
 
